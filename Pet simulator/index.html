@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pet Simulator</h1>
+
+        <div id="pet-name-input">
+            <label for="pet-name">Enter your pet's name: </label>
+            <input type="text" id="pet-name" placeholder="e.g., Buddy" />
+            <button onclick="setPetName()">Submit</button>
+        </div>
+
+        <div id="game-content" class="hidden">
+            <h2>Welcome, <span id="display-pet-name"></span>!</h2>
+
+            <div class="pet-display">
+                <img id="pet-image" src="https://i.imgur.com/a6DLhBB.png" alt="Pet Image" />
+            </div>
+
+            <div class="pet-status">
+                <div class="status-item">
+                    <label>Hunger: </label>
+                    <progress id="hunger-bar" value="50" max="100"></progress>
+                </div>
+                <div class="status-item">
+                    <label>Energy: </label>
+                    <progress id="energy-bar" value="50" max="100"></progress>
+                </div>
+                <div class="status-item">
+                    <label>Happiness: </label>
+                    <progress id="happiness-bar" value="50" max="100"></progress>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button onclick="feedPet()">Feed</button>
+                <button onclick="playWithPet()">Play</button>
+                <button onclick="putPetToSleep()">Sleep</button>
+            </div>
+
+            <div id="notification"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
